@@ -1,10 +1,17 @@
+import type React from 'react';
 import type { SVGProps } from 'react';
-const Arrow = (props: SVGProps<SVGSVGElement>) => (
+
+const Arrow: React.FC<{
+  isClicked: boolean;
+  isClickedHandler: React.Dispatch<React.SetStateAction<boolean>>;
+}> = (props) => (
   <svg
-    width='32px'
+    width='24px'
     height='32px'
     viewBox='0 0 24 24'
-    className='hover:scale-110 duration-500 stroke-[#DDD] fill-[#DDD] hover:fill-[#64ffda] hover:stroke-[#64ffda] animate-bounce'
+    className={`duration-500 stroke-[#DDD] fill-[#DDD] hover:fill-[#64ffda] hover:stroke-[#64ffda] hover:-translate-y-1 ${
+      props.isClicked ? 'rotate-180' : ''
+    }`}
     role='img'
     xmlns='http://www.w3.org/2000/svg'
     aria-labelledby='arrowDownIconTitle'
@@ -12,6 +19,9 @@ const Arrow = (props: SVGProps<SVGSVGElement>) => (
     strokeWidth={2}
     strokeLinecap='round'
     strokeLinejoin='round'
+    onClick={() => {
+      props.isClickedHandler(!props.isClicked);
+    }}
     {...props}
   >
     <path d='M6 15l6 6 6-6' />

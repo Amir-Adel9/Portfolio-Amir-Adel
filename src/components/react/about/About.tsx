@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 const About = () => {
   const [isInjured, setIsInjured] = useState(false);
+
   const imageRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
@@ -16,6 +17,7 @@ const About = () => {
       imageRef.current?.classList.remove('cursor-cell');
     }
   }, [isInjured]);
+
   return (
     <section>
       <div className='absolute left-[10%] top-[40%]'>

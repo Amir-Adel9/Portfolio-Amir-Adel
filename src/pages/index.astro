@@ -3,17 +3,23 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/react/hero/Header';
 import Hero from '../components/astro/Hero.astro';
 import About from '../components/astro/About.astro';
+import Github from '../components/react/svgs/Github';
+import Linkden from '../components/react/svgs/Linkden';
+import Arrow from '../components/react/svgs/Arrow';
+import Nav from '../components/react/hero/Nav';
+import Sides from '../components/react/Sides';
 ---
 
 <Layout title='Amir Adel | Software Developer'>
   <div class='h-screen'>
-    <Hero />
     <Header client:load />
+    <Hero />
     <main
       id='main'
       class='relative h-screen w-full flex justify-center items-center'
     >
       <About />
+      <Sides client:load />
     </main>
   </div>
 </Layout>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Hamburger from '../svgs/Hamburger';
 
 const Header = () => {
@@ -23,11 +23,10 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 flex items-center justify-end w-full duration-500 bg-[#111] h-[7%] text-[#64ffda] font-sono ${
-        isVisible ? 'translate-y-0' : '-translate-y-96'
-      }`}
+      className={`fixed top-0 flex items-center justify-end w-full duration-500 bg-[#111] h-[7%] text-[#DDD] font-sono 
+      ${isVisible ? 'translate-y-0' : '-translate-y-96'}`}
     >
-      <b className='absolute left-10'>Amir Adel</b>
+      <b className='absolute left-[10%] font-til'>Amir Adel</b>
       <nav>
         <ul className=' hidden sm:flex'>
           <li className='mr-14 '>About</li>

@@ -1,10 +1,10 @@
 import type { SVGProps } from 'react';
 const Github = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    width='32px'
-    height='32px'
+    width='24px'
+    height='24px'
     viewBox='0 0 256 256'
-    className='hover:scale-110 duration-500 fill-[#DDD] hover:fill-[#64ffda] '
+    className='duration-500 fill-[#DDD] hover:fill-[#64ffda] hover:-translate-y-1'
     xmlns='http://www.w3.org/2000/svg'
     {...props}
   >
