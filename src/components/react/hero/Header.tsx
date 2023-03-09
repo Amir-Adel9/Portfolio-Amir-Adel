@@ -23,14 +23,14 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 flex items-center justify-end w-full duration-500 bg-[#111] h-[7%] text-[#DDD] font-sono 
+      className={`fixed z-10 top-0 flex items-center justify-end w-full duration-500 bg-[#111] h-[7%] text-[#DDD] font-noto
       ${isVisible ? 'translate-y-0' : '-translate-y-96'}`}
     >
       <b className='absolute left-[10%] font-til'>Amir Adel</b>
       <nav>
-        <ul className=' hidden sm:flex'>
+        <ul className=' hidden sm:flex font-mono'>
           <li className='mr-14 '>About</li>
-          <li className='mr-14'>Projects</li>
+          <li className='mr-14'>Work</li>
           <li className='mr-14'>Contact</li>
           <li className='mr-14'>Resume</li>
         </ul>

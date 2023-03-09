@@ -11,15 +11,15 @@ import Sides from '../components/react/Sides';
 ---
 
 <Layout title='Amir Adel | Software Developer'>
-  <div class='h-screen'>
-    <Header client:load />
+  <div class='h-full'>
     <Hero />
+    <Header client:load />
     <main
       id='main'
-      class='relative h-screen w-full flex justify-center items-center'
+      class='relative h-screen w-fullflexjustify-centeritems-center'
     >
       <About />
-      <Sides client:load />
     </main>
+    <Sides client:load />
   </div>
 </Layout>

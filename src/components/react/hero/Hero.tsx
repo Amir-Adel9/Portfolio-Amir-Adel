@@ -3,7 +3,7 @@ import Loading from './Loading';
 import Link from '../svgs/Link';
 
 export const Hero: React.FC<{ children: ReactNode }> = (props) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [isInjured, setIsInjured] = useState(false);
 
   const titleRef = useRef<HTMLDivElement>(null);
@@ -24,7 +24,7 @@ export const Hero: React.FC<{ children: ReactNode }> = (props) => {
       workRef.current?.classList.remove('translate-y-[120px]');
       contactRef.current?.classList.remove('translate-y-[150px]');
       resumeRef.current?.classList.remove('translate-y-[170px]');
-    }, 3010);
+    }, 0);
 
     setTimeout(() => {
       workRef.current?.classList.remove('duration-700');
@@ -33,7 +33,7 @@ export const Hero: React.FC<{ children: ReactNode }> = (props) => {
       contactRef.current?.classList.add('duration-300');
       resumeRef.current?.classList.remove('duration-[1500ms]');
       resumeRef.current?.classList.add('duration-300');
-    }, 8000);
+    }, 3000);
   }, []);
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export const Hero: React.FC<{ children: ReactNode }> = (props) => {
           className='h-screen w-full flex-col flex justify-center items-center z-10 text-[#DDD]'
           id='home'
         >
-          <div className='absolute grid grid-cols-[45%_auto] md:grid-cols-[45%_auto] weird:grid-cols-[77%_auto] left-[10%] top-[30%] bg-rd-500'>
+          <div className='absolute grid-rows-3 top-[10%] grid grid-cols-[60%_auto] md:grid-cols-[45%_auto] weird:grid-cols-[77%_auto] left-[10%] md:top-[30%]'>
             <div className=''>
               <h1
                 className='font-tilt text-4xl md:text-9xl -translate-x-[900px] duration-500'
@@ -92,6 +92,11 @@ export const Hero: React.FC<{ children: ReactNode }> = (props) => {
               <ul className='block sm:flex mt-10 font-tilt text-xl md:text-3xl lg:text-5xl'>
                 <li
                   ref={aboutRef}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const elementToView = document.getElementById('about');
+                    elementToView?.scrollIntoView();
+                  }}
                   className='relative translate-y-[90px] opacity-50 hover:opacity-100 mr-14 hover:-translate-y-4 duration-300 cursor-pointer after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:md:h-2 after:w-[0%] after:left-0 after:absolute after:-bottom-1 after:md:-bottom-2 hover:after:w-full'
                 >
                   About
