@@ -1,4 +1,4 @@
-import Particles from 'react-tsparticles';
+import { Particles } from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import { useCallback } from 'react';
 import type { Engine } from 'tsparticles-engine';
@@ -31,7 +31,7 @@ const Background: React.FC<{ color: string }> = (props) => {
         },
         particles: {
           number: {
-            value: 30,
+            value: 25,
             density: {
               enable: true,
               value_area: 800,
