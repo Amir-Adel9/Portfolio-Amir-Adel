@@ -3,7 +3,7 @@ import Nav from './hero/Nav';
 import Arrow from './svgs/Arrow';
 import Email from './svgs/Email';
 import Github from './svgs/Github';
-import Linkden from './svgs/Linkden';
+import Linkedin from './svgs/Linkeden';
 
 const Sides = () => {
   const [isRotated, setIsRotated] = useState(false);
@@ -40,11 +40,11 @@ const Sides = () => {
         </span>
         <span className='mb-3 cursor-pointer'>
           <a href='https://www.linkedin.com/in/amir-adel312/' target={'_blank'}>
-            <Linkden />
+            <Linkedin />
           </a>
         </span>
         <span className='mb-3 cursor-pointer'>
-          <a href='https://github.com/Amir-Adel9' target={'_blank'}>
+          <a href='mailto:amiradel899@gmail.com' target={'_blank'}>
             <Email />
           </a>
         </span>

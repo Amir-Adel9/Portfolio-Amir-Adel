@@ -72,10 +72,10 @@ export const Hero: React.FC<{ children: ReactNode }> = (props) => {
                   I'm a passionate, self taught software developer
                 </span>
                 <span className='block'>
-                  with love for gaming, music and coding, and
+                  with a love for gaming, music and coding, and
                 </span>
                 <span className='block'>
-                  ambition to leave a mark on the software world.
+                  an ambition to leave a mark on the software world.
                 </span>
               </div>
             </div>
