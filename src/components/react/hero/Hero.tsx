@@ -2,7 +2,7 @@ import { ReactNode, useEffect, useRef, useState } from 'react';
 import Loading from './Loading';
 import Link from '../svgs/Link';
 
-export const Hero: React.FC<{ children: ReactNode }> = (props) => {
+const Hero: React.FC<{ children: ReactNode }> = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isInjured, setIsInjured] = useState(false);
 
@@ -124,7 +124,6 @@ export const Hero: React.FC<{ children: ReactNode }> = (props) => {
               </ul>
             </nav>
           </div>
-
           <div>{props.children}</div>
         </section>
       ) : (
@@ -133,3 +132,5 @@ export const Hero: React.FC<{ children: ReactNode }> = (props) => {
     </>
   );
 };
+
+export default Hero;
