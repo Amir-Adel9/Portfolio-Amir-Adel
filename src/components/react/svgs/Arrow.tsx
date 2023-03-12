@@ -1,5 +1,4 @@
 import type React from 'react';
-import type { SVGProps } from 'react';
 
 const Arrow: React.FC<{
   isClicked: boolean;
