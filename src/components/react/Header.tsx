@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import Drawer from '../Drawer';
-import Hamburger from '../svgs/Hamburger';
-import HeaderLink from '../svgs/HeaderLink';
+import Drawer from './Drawer';
+import Hamburger from './svgs/Hamburger';
+import HeaderLink from './svgs/HeaderLink';
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,7 +32,7 @@ const Header = () => {
       ${isVisible ? 'translate-y-0' : '-translate-y-[70rem]'}`}
     >
       <span
-        className='ml-28 flex  justify-center items-center cursor-pointer'
+        className='ml-4 sm:ml-12 md:ml-28 flex justify-center items-center cursor-pointer'
         onClick={(e) => {
           e.preventDefault();
           const elementToView = document.getElementById('home');
@@ -81,7 +81,7 @@ const Header = () => {
           </li>
           <li className='mr-14 cursor-pointer opacity-50 duration-300 hover:opacity-100 hover:scale-105 after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:w-[0%] after:left-0 after:absolute after:-bottom-1  hover:after:w-full'>
             <a
-              href='https://drive.google.com/file/d/1ha7RP4XMNdwdScSKnUXt-hXr6wwJ0yXP/view'
+              href='https://drive.google.com/file/d/1HaptcCYqe62Uxlyf01o3GlsnYT1gGpmY/view'
               className='flex items-center'
               target={'_blank'}
             >

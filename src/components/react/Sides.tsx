@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Nav from './hero/Nav';
+import Nav from './Nav';
 import Arrow from './svgs/Arrow';
 import Email from './svgs/Email';
 import Github from './svgs/Github';
