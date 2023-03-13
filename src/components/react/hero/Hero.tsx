@@ -117,8 +117,14 @@ const Hero: React.FC<{ children: ReactNode }> = (props) => {
                   ref={resumeRef}
                   className='relative duration-[1500ms] translate-y-[170px] opacity-50 hover:opacity-100  hover:-translate-y-4 cursor-pointer after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:md:h-2 after:w-[0%] after:left-0 after:absolute after:-bottom-1 after:md:-bottom-2 hover:after:w-full'
                 >
-                  <div className='flex items-center'>
-                    <span className='mr-3'>Resume</span> <Link />
+                  <div>
+                    <a
+                      href='https://drive.google.com/file/d/1HaptcCYqe62Uxlyf01o3GlsnYT1gGpmY/view'
+                      className='flex items-center'
+                      target={'_blank'}
+                    >
+                      <span className='mr-3'>Resume</span> <Link />
+                    </a>
                   </div>
                 </li>
               </ul>

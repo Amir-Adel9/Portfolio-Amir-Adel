@@ -8,12 +8,12 @@ const Hamburger = (props: SVGProps<SVGSVGElement>) => (
     className='flex sm:hidden mr-2'
     xmlns='http://www.w3.org/2000/svg'
     aria-labelledby='hamburgerIconTitle'
-    stroke='#64ffda'
+    stroke='#DDD'
     strokeWidth={2}
     strokeLinecap='round'
     strokeLinejoin='round'
     fill='none'
-    color='#64ffda'
+    color='#DDD'
     {...props}
   >
     <path d='M6 7L18 7M6 12L18 12M6 17L18 17' />

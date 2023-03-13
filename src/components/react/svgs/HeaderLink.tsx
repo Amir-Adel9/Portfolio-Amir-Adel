@@ -10,7 +10,7 @@ const Link = (props: SVGProps<SVGSVGElement>) => (
     strokeWidth={2}
     strokeLinecap='round'
     strokeLinejoin='round'
-    className='w-[20px] h-[20px] md:w-[32px] md:h-[32px]'
+    className='w-[16px] h-[16px]'
     {...props}
   >
     <path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6' />
