@@ -28,7 +28,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed z-10 top-0 flex items-center justify-between w-full duration-500 bg-[#111] h-[7%] text-[#DDD] font-noto
+      className={`fixed z-10 top-0 flex items-center justify-between w-full duration-500 text-lg bg-[#111] h-[8%] text-[#DDD] font-noto
       ${isVisible ? 'translate-y-0' : '-translate-y-[70rem]'}`}
     >
       <span
@@ -39,7 +39,7 @@ const Header = () => {
           elementToView?.scrollIntoView();
         }}
       >
-        <img src='favicon.png' alt='' className='w-7 h-7 mr-2' />
+        {/* <img src='favicon.png' alt='' className='w-7 h-7 mr-2' /> */}
         <b>Amir Adel</b>
       </span>
 
