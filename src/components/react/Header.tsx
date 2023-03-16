@@ -39,8 +39,7 @@ const Header = () => {
           elementToView?.scrollIntoView();
         }}
       >
-        {/* <img src='favicon.png' alt='' className='w-7 h-7 mr-2' /> */}
-        <b>Amir Adel</b>
+        <b className='hover:opacity-80'>Amir Adel</b>
       </span>
 
       <nav>
