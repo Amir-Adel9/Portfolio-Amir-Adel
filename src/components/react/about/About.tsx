@@ -1,11 +1,8 @@
 const About = () => {
   return (
-    <section
-      className='relative h-screen w-full  items-center flex-col justify-center'
-      id='about'
-    >
-      <div className='absolute left-[10%] top-[15%] w-[80%]  '>
-        <div className=' text-5xl font-tilt text-[#DDD] grid grid-rows-1 gap-10 grid-cols-[50%_50%] items-center justify-between'>
+    <section className='relative px-48 pt-36 min-h-screen w-full' id='about'>
+      <div>
+        <div className=' text-5xl font-tilt text-[#DDD] grid grid-rows-1 gap-10 grid-cols-[50%_50%] '>
           <div className='h-full'>
             <span className='text-2xl opacity-50 font-mono'>About Me</span>
             <h1>Briefing.</h1>
@@ -75,7 +72,7 @@ const About = () => {
             and that <br /> I mainly use when building my projects.
           </p>
           <section>
-            <div className='text-lg text-[#DDD] font-noto mt-10  '>
+            <div className='text-lg text-[#DDD] font-noto mt-10'>
               <div className='grid grid-cols-2 md:grid-cols-5 lg:grid-cols-7 gap-5 pl-16 py-5'>
                 <span className='relative flex flex-col items-center '>
                   <img

@@ -103,12 +103,22 @@ const Hero: React.FC<{ children: ReactNode }> = (props) => {
                 </li>
                 <li
                   ref={workRef}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const elementToView = document.getElementById('work');
+                    elementToView?.scrollIntoView();
+                  }}
                   className='relative translate-y-[120px] duration-700 mr-14 opacity-50 hover:opacity-100 hover:-translate-y-4  cursor-pointer after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:md:h-2 after:w-[0%] after:left-0 after:absolute after:-bottom-1 after:md:-bottom-2 hover:after:w-full'
                 >
                   Work
                 </li>
                 <li
                   ref={contactRef}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const elementToView = document.getElementById('contact');
+                    elementToView?.scrollIntoView();
+                  }}
                   className='relative mr-14 translate-y-[150px] opacity-50 hover:opacity-100  hover:-translate-y-4 hover: duration-[1200ms] cursor-pointer after:content-[""] after:bg-[#DDD] after:duration-300 after:md:h-2 after:h-1 after:w-[0%] after:left-0 after:absolute after:-bottom-1 after:md:-bottom-2 hover:after:w-full'
                 >
                   Contact

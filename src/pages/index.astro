@@ -4,19 +4,15 @@ import Header from '../components/react/Header';
 import Hero from '../components/astro/Hero.astro';
 import About from '../components/astro/About.astro';
 import Sides from '../components/react/Sides';
-import Drawer from '../components/react/Drawer';
+import Work from '../components/astro/Work.astro';
 ---
 
 <Layout title='Amir Adel | Software Developer'>
-  <div class='h-full'>
-    <Hero />
+  <main class='h-full'>
     <Header client:load />
-    <main
-      id='main'
-      class='relative h-screen w-fullflexjustify-centeritems-center'
-    >
-      <About />
-    </main>
+    <Hero />
+    <About />
+    <Work />
     <Sides client:load />
-  </div>
+  </main>
 </Layout>

@@ -13,19 +13,26 @@ const Header = () => {
   }, []);
 
   const listenToScroll = () => {
-    let aboutHeight = 500;
+    const aboutHeight = 500;
+    const workHeight = 1600;
+
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
-
-    if (winScroll > aboutHeight) {
+    console.log(winScroll);
+    if (winScroll > aboutHeight && winScroll < workHeight) {
       setIsVisible(true);
       setActiveNav('About');
+    } else if (winScroll > workHeight) {
+      setActiveNav('Work');
     } else {
       setIsVisible(false);
       setActiveNav('');
     }
   };
 
+  useEffect(() => {
+    console.log(activeNav);
+  }, [activeNav]);
   return (
     <header
       className={`fixed z-10 top-0 flex items-center justify-between w-full duration-500 text-lg bg-[#111] h-[8%] text-[#DDD] font-noto
@@ -41,7 +48,6 @@ const Header = () => {
       >
         <b className='hover:opacity-80'>Amir Adel</b>
       </span>
-
       <nav>
         <ul className=' hidden sm:flex font-mono'>
           <li
@@ -59,7 +65,11 @@ const Header = () => {
             About
           </li>
           <li
-            className='mr-14 cursor-pointer opacity-50 duration-300 hover:opacity-100 hover:scale-105 after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:w-[0%] after:left-0 after:absolute after:-bottom-1  hover:after:w-full'
+            className={`mr-14 cursor-pointer  duration-300 hover:opacity-100 hover:scale-105 after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:w-[0%] after:left-0 after:absolute after:-bottom-1  hover:after:w-full ${
+              activeNav === 'Work'
+                ? 'opacity-100 scale-105 after:w-full'
+                : 'opacity-50'
+            }`}
             onClick={(e) => {
               e.preventDefault();
               const elementToView = document.getElementById('work');
@@ -69,7 +79,11 @@ const Header = () => {
             Work
           </li>
           <li
-            className='mr-14 cursor-pointer opacity-50 duration-300 hover:opacity-100 hover:scale-105 after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:w-[0%] after:left-0 after:absolute after:-bottom-1  hover:after:w-full'
+            className={`mr-14 cursor-pointer  duration-300 hover:opacity-100 hover:scale-105 after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:w-[0%] after:left-0 after:absolute after:-bottom-1  hover:after:w-full ${
+              activeNav === 'Contact'
+                ? 'opacity-100 scale-105 after:w-full'
+                : 'opacity-50'
+            }`}
             onClick={(e) => {
               e.preventDefault();
               const elementToView = document.getElementById('contact');
