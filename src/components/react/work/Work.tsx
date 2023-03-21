@@ -1,11 +1,18 @@
 const Work = () => {
   return (
-    <section className='relative px-48 pt-36 min-h-screen w-full' id='work'>
-      <div className=' text-5xl font-tilt text-[#DDD]'>
+    <section
+      className='relative  px-20 md:px-48 pt-36 min-h-screen w-full'
+      id='work'
+    >
+      <div className=' text-5xl font-tilt text-[#DDD] '>
         <span className='text-2xl opacity-50 font-mono'>Work</span>
         <h1>Projects.</h1>
-        <div className='fle justify-center mt-16 text-base g-green-500 grid grid-cols-1 sm:grid-cols-3 grid-rows-1  align-middle '>
-          <div className='bg-[#222] w-1/2 h-96 rounded-lg flex flex-col items-center'>
+        <p className='text-base text-accent font-noto mt-5'>
+          These are some of the projects that I worked on, the
+        </p>
+
+        <div className='text-base mt-16 flex flex-wrap gap-28 justify-center items-center '>
+          <div className='bg-[#222]  w-full h-96 lg:w-[20%] sm:w-[40%]  rounded-lg flex flex-col items-center '>
             <img
               src='projects/typemaster.png'
               alt=''
@@ -14,7 +21,7 @@ const Work = () => {
             <span>Type Master ⌨️</span>
             <span>A full-stack typing game</span>
           </div>
-          <div className='bg-[#222] w-1/2 h-96 rounded-lg flex flex-col items-center'>
+          <div className='bg-[#222] w-full h-96 lg:w-[20%] sm:w-[40%] rounded-lg flex flex-col items-center'>
             <img
               src='projects/lolesports.jpg'
               alt=''
@@ -23,7 +30,7 @@ const Work = () => {
             <span>LoL Esports ⌨️</span>
             <span className='text-sm font-noto'>A full-stack typing game</span>
           </div>
-          <div className='bg-[#222] w-1/2 h-96 rounded-lg flex flex-col items-center justify-'>
+          <div className='bg-[#222] w-full h-96 lg:w-[20%] sm:w-[40%] rounded-lg flex flex-col items-center justify-'>
             <div className=' w-[80%] rounded-xl rounded-b-non mt-5  flex flex-col'>
               <img
                 src='projects/typemaster.png'
@@ -35,6 +42,33 @@ const Work = () => {
                 A full-stack typing game
               </span>
             </div>
+          </div>
+          <div className='bg-[#222] w-full h-96 lg:w-[20%] sm:w-[40%] rounded-lg flex flex-col items-center'>
+            <img
+              src='projects/lolesports.jpg'
+              alt=''
+              className='border border-accent rounded-lg rounded-b-none'
+            />
+            <span>LoL Esports ⌨️</span>
+            <span className='text-sm font-noto'>A full-stack typing game</span>
+          </div>
+          <div className='bg-[#222] w-full h-96 lg:w-[20%] sm:w-[40%] rounded-lg flex flex-col items-center'>
+            <img
+              src='projects/lolesports.jpg'
+              alt=''
+              className='border border-accent rounded-lg rounded-b-none'
+            />
+            <span>LoL Esports ⌨️</span>
+            <span className='text-sm font-noto'>A full-stack typing game</span>
+          </div>
+          <div className='bg-[#222] w-full h-96 lg:w-[20%] sm:w-[40%] rounded-lg flex flex-col items-center'>
+            <img
+              src='projects/lolesports.jpg'
+              alt=''
+              className='border border-accent rounded-lg rounded-b-none'
+            />
+            <span>LoL Esports ⌨️</span>
+            <span className='text-sm font-noto'>A full-stack typing game</span>
           </div>
         </div>
       </div>
