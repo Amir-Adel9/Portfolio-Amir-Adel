@@ -1,20 +1,21 @@
 const About = () => {
   return (
-    <section className='relative px-48 pt-36 min-h-screen w-full' id='about'>
+    <section
+      className='relative px-5 md:px-48 pt-36 min-h-screen w-full'
+      id='about'
+    >
       <div>
         <div className=' text-5xl font-tilt text-[#DDD] grid grid-rows-1 gap-10 grid-cols-[50%_50%] '>
           <div className='h-full'>
             <span className='text-2xl opacity-50 font-mono'>About Me</span>
             <h1>Briefing.</h1>
-            <div className='text-base text-accent font-noto mt-5'>
-              <p>
-                I am a full-stack developer who excels at creating <br />{' '}
-                elegant, reliable and easy to use web applications using various
-                tools <br /> and technologies. I am a hard worker, I am always
-                eager to learn <br /> new stuff, and always striving to deliver
-                to the best of my abilities.
-              </p>
-            </div>
+            <p className='text-base text-accent font-noto mt-5'>
+              I am a full-stack developer who excels at creating <br /> elegant,
+              reliable and easy to use web applications using various tools{' '}
+              <br /> and technologies. I am a hard worker, I am always eager to
+              learn <br /> new stuff, and always striving to deliver to the best
+              of my abilities.
+            </p>
           </div>
           <div className='h-full'>
             <span className='text-2xl opacity-50 font-mono'>About Me</span>
