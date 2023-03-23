@@ -8,11 +8,11 @@ import Work from '../components/astro/Work.astro';
 ---
 
 <Layout title='Amir Adel | Software Developer'>
-  <main class=''>
-    <Header client:idle />
+  <main class='overflow-x-hidden'>
+    <Header client:load />
     <Hero />
     <About />
     <Work />
-    <Sides client:idle />
+    <Sides client:load />
   </main>
 </Layout>

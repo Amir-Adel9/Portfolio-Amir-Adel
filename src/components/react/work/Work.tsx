@@ -19,8 +19,10 @@ const Work = () => {
               className='w-full h-[40%] border border-b- border-[#DDD] rounded-lg rounded-b-none'
             />
             <span>Type Master ⌨️</span>
-            <p className='text-sm font-noto'>A full-stack typing game </p>
-            <div className='absolute w-[90%] bottom-5 flex justify-between '>
+            <p className='text-sm font-noto text-center'>
+              A full-stack typing game{' '}
+            </p>
+            <div className='absolute w-[90%] bottom-5 flex flex-wrap justify-center gap-1'>
               <span className='bg-accent text-black p-1 rounded-sm text-xs'>
                 TypeScript
               </span>
@@ -41,50 +43,121 @@ const Work = () => {
               </span>
             </div>
           </div>
-          <div className='bg-[#222] w-full md:w-1/3 lg:w-1/4 h-96 rounded-lg flex flex-col items-center'>
+          <div className='relative bg-[#222] w-full md:w-1/3 lg:w-1/4 h-96 rounded-lg flex flex-col items-center'>
             <img
               src='projects/lolesports.jpg'
               alt=''
               className='w-full h-[40%] rounded-lg rounded-b-none'
             />
-            <span>LoL Esports ⌨️</span>
-            <span className='text-sm font-noto'>A full-stack typing game</span>
+            <span>LoL Esports 🕹️</span>
+            <p className='text-sm font-noto text-center'>
+              A League of Legends Esports API
+            </p>
+            <div className='absolute w-[90%] bottom-5 flex flex-wrap justify-center gap-1'>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                TypeScript
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Node.js
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Express
+              </span>
+            </div>
           </div>
-          <div className='bg-[#222] w-full md:w-1/3 lg:w-1/4 h-96 rounded-lg flex flex-col items-center'>
+          <div className='relative bg-[#222] w-full md:w-1/3 lg:w-1/4 h-96 rounded-lg flex flex-col items-center'>
             <img
               src='projects/lolesports.jpg'
               alt=''
               className='w-full h-[40%] rounded-lg rounded-b-none'
             />
-            <span>LoL Esports ⌨️</span>
-            <span className='text-sm font-noto'>A full-stack typing game</span>
+            <span>Image Processing 🖼️</span>
+            <span className='text-sm font-noto text-center'>
+              An API for resizing images
+            </span>
+            <div className='absolute w-[90%] bottom-5 flex flex-wrap justify-center gap-1'>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                TypeScript
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Node.js
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Express
+              </span>
+            </div>
           </div>
-          <div className='bg-[#222] w-full md:w-1/3 lg:w-1/4 h-96 rounded-lg flex flex-col items-center'>
+          <div className='relative bg-[#222] w-full md:w-1/3 lg:w-1/4 h-96 rounded-lg flex flex-col items-center'>
             <img
               src='projects/lolesports.jpg'
               alt=''
               className='w-full h-[40%] rounded-lg rounded-b-none'
             />
-            <span>LoL Esports ⌨️</span>
-            <span className='text-sm font-noto'>A full-stack typing game</span>
+            <span>Shopfront🛒</span>
+            <span className='text-sm font-noto text-center'>
+              A back-end for an e-commerce{' '}
+            </span>
+            <div className='absolute w-[90%] bottom-5 flex flex-wrap justify-center gap-1'>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                TypeScript
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Node.js
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Express
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                PostgreSQL
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Jasmine
+              </span>
+            </div>
           </div>
-          <div className='bg-[#222] w-full md:w-1/3 lg:w-1/4 h-96 rounded-lg flex flex-col items-center'>
+          <div className='relative bg-[#222] w-full md:w-1/3 lg:w-1/4 h-96 rounded-lg flex flex-col items-center'>
             <img
               src='projects/lolesports.jpg'
               alt=''
               className='w-full h-[40%] rounded-lg rounded-b-none'
             />
-            <span>LoL Esports ⌨️</span>
-            <span className='text-sm font-noto'>A full-stack typing game</span>
+            <span>Coffee Express ☕</span>
+            <span className='text-sm font-noto text-center'>
+              A functional coffee shop application
+            </span>
+            <div className='absolute w-[90%] bottom-5 flex flex-wrap justify-center gap-1'>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Dart
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Flutter
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                GetX
+              </span>
+            </div>
           </div>
-          <div className='bg-[#222] w-full md:w-1/3 lg:w-1/4 h-96 rounded-lg flex flex-col items-center'>
+          <div className='relative bg-[#222] w-full md:w-1/3 lg:w-1/4 h-96 rounded-lg flex flex-col items-center'>
             <img
               src='projects/lolesports.jpg'
               alt=''
               className='w-full h-[40%] rounded-lg rounded-b-none'
             />
             <span>LoL Esports ⌨️</span>
-            <span className='text-sm font-noto'>A full-stack typing game</span>
+            <span className='text-sm font-noto text-center'>
+              A full-stack typing game
+            </span>
+            <div className='absolute w-[90%] bottom-5 flex flex-wrap justify-center gap-1'>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                TypeScript
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Node.js
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Express
+              </span>
+            </div>
           </div>
         </div>
       </div>
