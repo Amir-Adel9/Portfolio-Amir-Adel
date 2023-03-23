@@ -1,7 +1,7 @@
 const Work = () => {
   return (
     <section
-      className='relative  px-20 md:px-48 pt-36 min-h-screen w-full'
+      className='relative w-full min-h-screen pt-36 px-5 sm:px-20 md:px-48'
       id='work'
     >
       <div className=' text-5xl font-tilt text-[#DDD] '>

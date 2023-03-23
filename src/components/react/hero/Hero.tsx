@@ -53,10 +53,10 @@ const Hero: React.FC<{ children: ReactNode }> = (props) => {
     <>
       {!isLoading ? (
         <section
-          className='h-screen w-full flex-col flex justify-center items-center z-10 text-[#DDD]'
+          className='relative w-screen h-screen z-10 flex flex-col pt-10 px-5 sm:pt-[17.5rem] sm:px-20 md:px-48 text-[#DDD]'
           id='home'
         >
-          <div className='absolute grid-rows-3 top-[10%] grid grid-cols-[60%_auto] md:grid-cols-[45%_auto] weird:grid-cols-[77%_auto] left-[10%] md:top-[30%]'>
+          <div className=' grid-rows-3 grid grid-cols-[60%_auto] md:grid-cols-[45%_auto] weird:grid-cols-[50%_auto]  md:top-[30%]'>
             <div className=''>
               <h1
                 className='font-tilt text-4xl md:text-9xl -translate-x-[900px] duration-500'
@@ -82,7 +82,7 @@ const Hero: React.FC<{ children: ReactNode }> = (props) => {
             <img
               src={`${!isInjured ? 'hat.png' : 'hatInjured.png'}`}
               alt=''
-              className='-translate-y-7 w-40 h-40 inline hover:animate-bounce cursor-pointer opacity-00'
+              className='-translate-y-7 w-40 h-40 inline hover:animate-bounce cursor-pointer opacity-0z'
               ref={imageRef}
               onClick={() => {
                 setIsInjured((prevState) => !prevState);
