@@ -53,11 +53,11 @@ const Hero: React.FC<{ children: ReactNode }> = (props) => {
     <>
       {!isLoading ? (
         <section
-          className='h-screen w-full flex-col flex justify-center items-center z-10 text-[#DDD]'
+          className='relative w-full min-h-screen z-10 flex flex-col pt-20 px-5 sm:pt-[17.5rem] sm:px-20 md:px-48 text-[#DDD]'
           id='home'
         >
-          <div className='absolute grid-rows-3 top-[10%] grid grid-cols-[60%_auto] md:grid-cols-[45%_auto] weird:grid-cols-[77%_auto] left-[10%] md:top-[30%]'>
-            <div className=''>
+          <div className='grid grid-cols-[60%_auto] md:grid-cols-[45%_auto] weird:grid-cols-[50%_auto] md:w-full md:absolute md:top-[30%]'>
+            <div>
               <h1
                 className='font-tilt text-4xl md:text-9xl -translate-x-[900px] duration-500'
                 ref={titleRef}
@@ -82,7 +82,7 @@ const Hero: React.FC<{ children: ReactNode }> = (props) => {
             <img
               src={`${!isInjured ? 'hat.png' : 'hatInjured.png'}`}
               alt=''
-              className='-translate-y-7 w-40 h-40 inline hover:animate-bounce cursor-pointer opacity-00'
+              className='-translate-y-7 w-40 h-40 inline hover:animate-bounce cursor-pointer opacity-0z'
               ref={imageRef}
               onClick={() => {
                 setIsInjured((prevState) => !prevState);
@@ -97,7 +97,7 @@ const Hero: React.FC<{ children: ReactNode }> = (props) => {
                     const elementToView = document.getElementById('about');
                     elementToView?.scrollIntoView();
                   }}
-                  className='relative translate-y-[90px] opacity-50 hover:opacity-100 mr-14 hover:-translate-y-4 duration-300 cursor-pointer after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:md:h-2 after:w-[0%] after:left-0 after:absolute after:-bottom-1 after:md:-bottom-2 hover:after:w-full'
+                  className='relative translate-y-[90px] opacity-50 hover:opacity-100 mr-14 sm:hover:-translate-y-4 duration-300 cursor-pointer after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:md:h-2 after:w-[0%] after:left-0 after:absolute after:-bottom-1 after:md:-bottom-2 hover:after:w-full'
                 >
                   About
                 </li>
@@ -108,7 +108,7 @@ const Hero: React.FC<{ children: ReactNode }> = (props) => {
                     const elementToView = document.getElementById('work');
                     elementToView?.scrollIntoView();
                   }}
-                  className='relative translate-y-[120px] duration-700 mr-14 opacity-50 hover:opacity-100 hover:-translate-y-4  cursor-pointer after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:md:h-2 after:w-[0%] after:left-0 after:absolute after:-bottom-1 after:md:-bottom-2 hover:after:w-full'
+                  className='relative translate-y-[120px] duration-700 mr-14 opacity-50 hover:opacity-100 sm:hover:-translate-y-4  cursor-pointer after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:md:h-2 after:w-[0%] after:left-0 after:absolute after:-bottom-1 after:md:-bottom-2 hover:after:w-full'
                 >
                   Work
                 </li>
@@ -119,13 +119,13 @@ const Hero: React.FC<{ children: ReactNode }> = (props) => {
                     const elementToView = document.getElementById('contact');
                     elementToView?.scrollIntoView();
                   }}
-                  className='relative mr-14 translate-y-[150px] opacity-50 hover:opacity-100  hover:-translate-y-4 hover: duration-[1200ms] cursor-pointer after:content-[""] after:bg-[#DDD] after:duration-300 after:md:h-2 after:h-1 after:w-[0%] after:left-0 after:absolute after:-bottom-1 after:md:-bottom-2 hover:after:w-full'
+                  className='relative mr-14 translate-y-[150px] opacity-50 hover:opacity-100  sm:hover:-translate-y-4 hover: duration-[1200ms] cursor-pointer after:content-[""] after:bg-[#DDD] after:duration-300 after:md:h-2 after:h-1 after:w-[0%] after:left-0 after:absolute after:-bottom-1 after:md:-bottom-2 hover:after:w-full'
                 >
                   Contact
                 </li>
                 <li
                   ref={resumeRef}
-                  className='relative duration-[1500ms] translate-y-[170px] opacity-50 hover:opacity-100  hover:-translate-y-4 cursor-pointer after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:md:h-2 after:w-[0%] after:left-0 after:absolute after:-bottom-1 after:md:-bottom-2 hover:after:w-full'
+                  className='relative duration-[1500ms] translate-y-[170px] opacity-50 hover:opacity-100  sm:hover:-translate-y-4 cursor-pointer after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:md:h-2 after:w-[0%] after:left-0 after:absolute after:-bottom-1 after:md:-bottom-2 hover:after:w-full'
                 >
                   <div>
                     <a

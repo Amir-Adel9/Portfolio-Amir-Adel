@@ -23,6 +23,7 @@ const Header = () => {
       setIsVisible(true);
       setActiveNav('About');
     } else if (winScroll > workHeight) {
+      setIsVisible(true);
       setActiveNav('Work');
     } else {
       setIsVisible(false);
