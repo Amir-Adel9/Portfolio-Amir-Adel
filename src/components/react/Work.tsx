@@ -11,8 +11,23 @@ const Work = () => {
           These are some of the projects that I worked on, the
         </p>
 
-        <div className='flex flex-wrap gap-5 justify-center text-base mt-16 '>
-          <div className='relative bg-[#222] w-full md:w-1/3 lg:w-1/4 h-96 rounded-lg flex flex-col items-center'>
+        <div className='flex flex-wrap gap-x-1 gap-y-5 justify-evenly text-base mt-16 bg-fuchsia-00'>
+          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+            <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
+              <a href='https://typemaster-plus.vercel.app/' target={'_blank'}>
+                <span className='cursor-pointer hover:underline'>
+                  Live Website
+                </span>
+              </a>
+              <a
+                href='https://github.com/Amir-Adel9/typemaster'
+                target={'_blank'}
+              >
+                <span className='cursor-pointer hover:underline'>
+                  Source Code
+                </span>
+              </a>
+            </div>
             <img
               src='projects/typemaster.png'
               alt=''
@@ -43,7 +58,22 @@ const Work = () => {
               </span>
             </div>
           </div>
-          <div className='relative bg-[#222] w-full md:w-1/3 lg:w-1/4 h-96 rounded-lg flex flex-col items-center'>
+          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+            <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
+              <a href='https://typemaster-plus.vercel.app/' target={'_blank'}>
+                <span className='cursor-pointer hover:underline'>
+                  Live Website
+                </span>
+              </a>
+              <a
+                href='https://github.com/Amir-Adel9/typemaster'
+                target={'_blank'}
+              >
+                <span className='cursor-pointer hover:underline'>
+                  Source Code
+                </span>
+              </a>
+            </div>
             <img
               src='projects/lolesports.jpg'
               alt=''
@@ -65,7 +95,22 @@ const Work = () => {
               </span>
             </div>
           </div>
-          <div className='relative bg-[#222] w-full md:w-1/3 lg:w-1/4 h-96 rounded-lg flex flex-col items-center'>
+          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+            <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
+              <a href='https://typemaster-plus.vercel.app/' target={'_blank'}>
+                <span className='cursor-pointer hover:underline'>
+                  Live Website
+                </span>
+              </a>
+              <a
+                href='https://github.com/Amir-Adel9/typemaster'
+                target={'_blank'}
+              >
+                <span className='cursor-pointer hover:underline'>
+                  Source Code
+                </span>
+              </a>
+            </div>
             <img
               src='projects/lolesports.jpg'
               alt=''
@@ -87,7 +132,17 @@ const Work = () => {
               </span>
             </div>
           </div>
-          <div className='relative bg-[#222] w-full md:w-1/3 lg:w-1/4 h-96 rounded-lg flex flex-col items-center'>
+          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+            <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
+              <a
+                href='https://github.com/Amir-Adel9/store-backend'
+                target={'_blank'}
+              >
+                <span className='cursor-pointer hover:underline'>
+                  Source Code & Preview
+                </span>
+              </a>
+            </div>
             <img
               src='projects/lolesports.jpg'
               alt=''
@@ -115,7 +170,17 @@ const Work = () => {
               </span>
             </div>
           </div>
-          <div className='relative bg-[#222] w-full md:w-1/3 lg:w-1/4 h-96 rounded-lg flex flex-col items-center'>
+          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+            <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
+              <a
+                href='https://github.com/Amir-Adel9/coffee_express'
+                target={'_blank'}
+              >
+                <span className='cursor-pointer hover:underline'>
+                  Source Code & Preview
+                </span>
+              </a>
+            </div>
             <img
               src='projects/lolesports.jpg'
               alt=''
@@ -137,7 +202,17 @@ const Work = () => {
               </span>
             </div>
           </div>
-          <div className='relative bg-[#222] w-full md:w-1/3 lg:w-1/4 h-96 rounded-lg flex flex-col items-center'>
+          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+            <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
+              <a
+                href='https://github.com/Amir-Adel9/typemaster'
+                target={'_blank'}
+              >
+                <span className='cursor-pointer hover:underline'>
+                  Source Code & Preview
+                </span>
+              </a>
+            </div>
             <img
               src='projects/lolesports.jpg'
               alt=''
