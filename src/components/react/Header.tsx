@@ -36,7 +36,7 @@ const Header = () => {
   }, [activeNav]);
   return (
     <header
-      className={`fixed z-10 top-0 flex items-center justify-between w-full duration-500 text-lg bg-[#111] h-[8%] text-[#DDD] font-noto
+      className={`fixed z-50 top-0 flex items-center justify-between w-full duration-500 text-lg bg-[#111] h-[8%] text-[#DDD] font-noto
       ${isVisible ? 'translate-y-0' : '-translate-y-[70rem]'}`}
     >
       <span

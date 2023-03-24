@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useRef, useState } from 'react';
 import Loading from './Loading';
-import Link from '../svgs/Link';
+import Link from './svgs/Link';
 
 const Hero: React.FC<{ children: ReactNode }> = (props) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -56,7 +56,7 @@ const Hero: React.FC<{ children: ReactNode }> = (props) => {
           className='relative w-full min-h-screen z-10 flex flex-col pt-20 px-5 sm:pt-[17.5rem] sm:px-20 md:px-48 text-[#DDD]'
           id='home'
         >
-          <div className='grid grid-cols-[60%_auto] md:grid-cols-[45%_auto] weird:grid-cols-[50%_auto] md:w-full md:absolute md:top-[30%]'>
+          <div className='grid grid-cols-[60%_auto] md:grid-cols-[45%_auto] weird:grid-cols-[40%_auto] md:w-full md:absolute md:top-[30%]'>
             <div>
               <h1
                 className='font-tilt text-4xl md:text-9xl -translate-x-[900px] duration-500'
