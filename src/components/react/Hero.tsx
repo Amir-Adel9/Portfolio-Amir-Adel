@@ -129,7 +129,7 @@ const Hero: React.FC<{ children: ReactNode }> = (props) => {
                 >
                   <div>
                     <a
-                      href='https://drive.google.com/file/d/1HaptcCYqe62Uxlyf01o3GlsnYT1gGpmY/view'
+                      href='https://drive.google.com/file/d/1gAz-6v8_8mfttZP3TQVG93ac1qmK5Ryo/view?usp=sharing'
                       className='flex items-center'
                       target={'_blank'}
                     >
