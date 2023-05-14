@@ -95,7 +95,7 @@ const Header = () => {
           </li>
           <li className='mr-14 cursor-pointer opacity-50 duration-300 hover:opacity-100 hover:scale-105 after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:w-[0%] after:left-0 after:absolute after:-bottom-1  hover:after:w-full'>
             <a
-              href='https://drive.google.com/file/d/1HaptcCYqe62Uxlyf01o3GlsnYT1gGpmY/view'
+              href='https://drive.google.com/file/d/1gAz-6v8_8mfttZP3TQVG93ac1qmK5Ryo/view?usp=sharing'
               className='flex items-center'
               target={'_blank'}
             >
