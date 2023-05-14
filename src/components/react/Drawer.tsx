@@ -14,14 +14,15 @@ const Drawer = () => {
       />
 
       {isOpened ? (
-        <div className='bg-[#222] fixed z-20 h-screen w-[40%] right-0 sm:hidden'>
+        <div className='bg-[#222] fixed z-20 h-screen w-full right-0 flex justify-center items-center sm:hidden'>
           <nav className=''>
-            <ul className='font-mono'>
+            <ul className='font-tilt text-2xl'>
               <li
                 className={`mr-14 cursor-pointer  duration-300 hover:opacity-100 hover:scale-105 after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:w-[0%] after:left-0 after:absolute after:-bottom-1  hover:after:w-full`}
                 onClick={(e) => {
                   e.preventDefault();
                   const elementToView = document.getElementById('about');
+                  setIsOpened(false);
                   elementToView?.scrollIntoView();
                 }}
               >
@@ -32,6 +33,7 @@ const Drawer = () => {
                 onClick={(e) => {
                   e.preventDefault();
                   const elementToView = document.getElementById('work');
+                  setIsOpened(false);
                   elementToView?.scrollIntoView();
                 }}
               >
@@ -42,12 +44,16 @@ const Drawer = () => {
                 onClick={(e) => {
                   e.preventDefault();
                   const elementToView = document.getElementById('contact');
+                  setIsOpened(false);
                   elementToView?.scrollIntoView();
                 }}
               >
                 Contact
               </li>
-              <li className='mr-14 cursor-pointer opacity-50 duration-300 hover:opacity-100 hover:scale-105 after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:w-[0%] after:left-0 after:absolute after:-bottom-1  hover:after:w-full'>
+              <li
+                onClick={() => setIsOpened(false)}
+                className='mr-14 cursor-pointer opacity-50 duration-300 hover:opacity-100 hover:scale-105 after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:w-[0%] after:left-0 after:absolute after:-bottom-1  hover:after:w-full'
+              >
                 <a
                   href='https://drive.google.com/file/d/1ha7RP4XMNdwdScSKnUXt-hXr6wwJ0yXP/view'
                   className='flex items-center'

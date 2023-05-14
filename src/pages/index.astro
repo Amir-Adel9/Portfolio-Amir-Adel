@@ -5,14 +5,16 @@ import Hero from '../components/astro/Hero.astro';
 import About from '../components/astro/About.astro';
 import Sides from '../components/react/Sides';
 import Work from '../components/astro/Work.astro';
+import Footer from '../components/react/Footer';
 ---
 
 <Layout title='Amir Adel | Software Developer'>
+  <Header client:load />
   <main class='overflow-x-hidden'>
-    <Header client:load />
     <Hero />
     <About />
     <Work />
     <Sides client:load />
   </main>
+  <Footer />
 </Layout>

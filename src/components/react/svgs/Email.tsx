@@ -7,7 +7,7 @@ const Email = (props: SVGProps<SVGSVGElement>) => (
     height='32px'
     viewBox='0 0 512 512'
     xmlns='http://www.w3.org/2000/svg'
-    className='duration-500 fill-[#DDD] hover:fill-[#64ffda] hover:-translate-y-1'
+    className='duration-500 fill-[#f1f1f1] hover:fill-[#64ffda] hover:-translate-y-1'
     {...props}
   >
     <title>{'mail'}</title>
