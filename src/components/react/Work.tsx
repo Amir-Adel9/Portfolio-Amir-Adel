@@ -256,7 +256,7 @@ const Work = () => {
             <span className='text-sm font-noto text-center p-2'>
               A functional coffee shop application made with Flutter and uses
               GetX for state management. It features a home page, a product
-              page, a cart, and the ability to add items to favorites
+              page, a cart, and the ability to add items to favorites.
             </span>
             <div className='absolute w-[90%] bottom-5 flex flex-wrap justify-center gap-1'>
               <span className='bg-accent text-black p-1 rounded-sm text-xs'>
