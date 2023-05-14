@@ -4,7 +4,7 @@ const Github = (props: SVGProps<SVGSVGElement>) => (
     width='24px'
     height='24px'
     viewBox='0 0 256 256'
-    className='duration-500 fill-[#DDD] hover:fill-[#64ffda] hover:-translate-y-1'
+    className='duration-500 fill-[#f1f1f1] hover:fill-[#64ffda] hover:-translate-y-1'
     xmlns='http://www.w3.org/2000/svg'
     {...props}
   >

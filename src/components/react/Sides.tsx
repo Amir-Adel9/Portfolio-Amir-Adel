@@ -32,7 +32,7 @@ const Sides = () => {
 
   return (
     <div className={`${!finishedLoading ? 'opacity-0' : ''} duration-1000`}>
-      <div className='fixed z-50 items-center bottom-0 left-[3%] sm:flex flex-col mt-10 after:content-[""] after:bg-[#DDD] after:w-[1px] after:h-24 hidden'>
+      <div className='fixed z-50 items-center bottom-0 left-[2%] sm:flex flex-col mt-10 after:content-[""] after:bg-[#f1f1f1] after:w-[1px] after:h-24 hidden'>
         <span className='mb-3 cursor-pointer'>
           <a href='https://github.com/Amir-Adel9' target={'_blank'}>
             <Github />
@@ -49,7 +49,7 @@ const Sides = () => {
           </a>
         </span>
       </div>
-      <div className='fixed z-50 after:animate-arrow after:-rotate-180 items-center bottom-0 right-[3%] sm:flex flex-col mt-10 after:content-[""] after:bg-[#DDD] after:w-[1px] after:h-24 hidden'>
+      <div className='fixed z-50 after:animate-arrow after:-rotate-180 items-center bottom-0 right-[3%] sm:flex flex-col mt-10 after:content-[""] after:bg-[#f1f1f1] after:w-[1px] after:h-24 hidden'>
         <Nav isClicked={isRotated}>
           <Arrow isClicked={isRotated} isClickedHandler={setIsRotated} />
         </Nav>

@@ -34,25 +34,26 @@ const About = () => {
                   <li className='before:content-["▹"] before:text-accent before:mr-2 '>
                     Python (Made a web scrapper and a typing game)
                   </li>
-                  <li className='before:content-["▹"] before:text-accent before:mr-2 '>
-                    Rust (Currently learning the language)
-                  </li>
+
                   <li className='before:content-["▹"] before:text-accent before:mr-2 '>
                     C#/Unity
                   </li>
                   <li className='before:content-["▹"] before:text-accent before:mr-2 '>
                     Dart/Flutter
                   </li>
+                  <li className='before:content-["▹"] before:text-accent before:mr-2 '>
+                    HTML5/CSS3
+                  </li>
                 </ul>
                 <ul className='text-[#DDD] mt-5 ml-12'>
-                  <li className='before:content-["▹"] before:text-accent before:mr-2 '>
-                    HTML/CSS
-                  </li>
                   <li className='before:content-["▹"] before:text-accent before:mr-2 '>
                     JavaScript
                   </li>
                   <li className='before:content-["▹"] before:text-accent before:mr-2 '>
                     Discord.js
+                  </li>
+                  <li className='before:content-["▹"] before:text-accent before:mr-2 '>
+                    Jasmine
                   </li>
                   <li className='before:content-["▹"] before:text-accent before:mr-2 '>
                     CircleCI

@@ -8,7 +8,7 @@ const Arrow: React.FC<{
     width='24px'
     height='32px'
     viewBox='0 0 24 24'
-    className={`duration-500 stroke-[#DDD] fill-[#DDD] hover:fill-[#64ffda] hover:stroke-[#64ffda] hover:-translate-y-1 ${
+    className={`duration-500 stroke-[#f1f1f1] fill-[#f1f1f1] hover:fill-[#64ffda] hover:stroke-[#64ffda] hover:-translate-y-1 ${
       props.isClicked ? 'rotate-180' : ''
     }`}
     role='img'
