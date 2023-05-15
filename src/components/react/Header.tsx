@@ -18,7 +18,7 @@ const Header = () => {
 
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
-    console.log(winScroll);
+
     if (winScroll > aboutHeight && winScroll < workHeight) {
       setIsVisible(true);
       setActiveNav('About');
@@ -31,9 +31,6 @@ const Header = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(activeNav);
-  }, [activeNav]);
   return (
     <header
       className={`fixed z-50 top-0 flex items-center justify-between w-full duration-500 text-lg bg-[#111] h-[8%] text-[#DDD] font-noto

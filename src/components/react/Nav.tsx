@@ -10,8 +10,9 @@ const Nav: React.FC<{
       onClick={(e) => {
         e.preventDefault();
         const elementToView = document.getElementById(
-          `${!props.isClicked ? 'main' : 'home'}`
+          `${!props.isClicked ? 'work' : 'home'}`
         );
+        console.log(elementToView);
         elementToView?.scrollIntoView();
       }}
     >
