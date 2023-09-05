@@ -22,6 +22,98 @@ const Work = () => {
         <div className='flex flex-wrap gap-x-1 gap-y-5 justify-evenly text-base mt-16'>
           <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
             <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
+              <a
+                href='https://www.arabianleaguegrounds.live/'
+                target={'_blank'}
+              >
+                <span className='cursor-pointer hover:underline'>
+                  Live Website
+                </span>
+              </a>
+            </div>
+            <img
+              src='projects/alg.png'
+              alt=''
+              className='w-full h-[40%] rounded-lg rounded-b-none'
+            />
+            <span>Arabian League Grounds 🕹️</span>
+            <p className='text-sm font-noto text-center p-2'>
+              An all-in-one companion for Riot Games' League of Legends Arabian
+              League championship with the ability to view the standings and
+              schedule of the matches, while also being able to predict the
+              results of the matches and compete with other users via the
+              leaderboard. <br />
+              <b> (Updated & Maintained with 200+ active users)</b>
+            </p>
+            <div className='absolute w-[90%] bottom-5 flex flex-wrap justify-center gap-1'>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                TypeScript
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                React
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Next.js
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Tailwind CSS
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                DrizzleORM
+              </span>
+            </div>
+          </div>
+          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+            <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
+              <a href='https://catcorner.vercel.app/' target={'_blank'}>
+                <span className='cursor-pointer hover:underline'>
+                  Live Website
+                </span>
+              </a>
+              <a
+                href='https://github.com/Amir-Adel9/cat-corner'
+                target={'_blank'}
+              >
+                <span className='cursor-pointer hover:underline'>
+                  Source Code
+                </span>
+              </a>
+            </div>
+            <img
+              src='projects/catcorner.png'
+              alt=''
+              className='w-full h-[40%] rounded-lg rounded-b-none'
+            />
+            <span>Cat Corner 🐱</span>
+            <p className='text-xs 2xl:text-sm font-noto text-center p-2 '>
+              A social media like website for posting pictures of cats, includes
+              features as posting, liking, commenting and viewing user profiles,
+              and any pictures that do not include a cat will be rejected <br />{' '}
+              <br /> (still under development with more features to come)
+            </p>
+            <div className='absolute w-[90%] bottom-5 flex flex-wrap justify-center gap-1'>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                TypeScript
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                React
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Next.js
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Tailwind CSS
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                tRPC
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Prisma
+              </span>
+            </div>
+          </div>
+          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+            <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
               <a href='https://typemaster-plus.vercel.app/' target={'_blank'}>
                 <span className='cursor-pointer hover:underline'>
                   Live Website
@@ -58,7 +150,7 @@ const Work = () => {
                 Next.js
               </span>
               <span className='bg-accent text-black p-1 rounded-sm text-xs'>
-                Tailwind Css
+                Tailwind CSS
               </span>
               <span className='bg-accent text-black p-1 rounded-sm text-xs'>
                 tRPC
@@ -70,13 +162,13 @@ const Work = () => {
           </div>
           <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
             <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
-              <a href='https://catcorner.vercel.app/' target={'_blank'}>
+              <a href='https://amplified-spotify.vercel.app/' target={'_blank'}>
                 <span className='cursor-pointer hover:underline'>
                   Live Website
                 </span>
               </a>
               <a
-                href='https://github.com/Amir-Adel9/cat-corner'
+                href='https://github.com/Amir-Adel9/amplified-spotify-old'
                 target={'_blank'}
               >
                 <span className='cursor-pointer hover:underline'>
@@ -85,16 +177,15 @@ const Work = () => {
               </a>
             </div>
             <img
-              src='projects/catcorner.png'
+              src='projects/amp.png'
               alt=''
-              className='w-full h-[40%] rounded-lg rounded-b-none'
+              className='w-full h-[40%] border border-b- border-[#DDD] rounded-lg rounded-b-none'
             />
-            <span>Cat Corner 🐱</span>
-            <p className='text-xs 2xl:text-sm font-noto text-center p-2 '>
-              A social media like website for posting pictures of cats, includes
-              features as posting, liking, commenting and viewing user profiles,
-              and any pictures that do not include a cat will be rejected (still
-              under development)
+            <span>Amplified Spotify 🎵</span>
+            <p className='text-xs xl:text-sm font-noto text-center p-2'>
+              An application that allows users to log in with their spotify
+              accounts and view their most listened to tracks.
+              <br /> <br /> (still under development with more features to come)
             </p>
             <div className='absolute w-[90%] bottom-5 flex flex-wrap justify-center gap-1'>
               <span className='bg-accent text-black p-1 rounded-sm text-xs'>
@@ -107,48 +198,10 @@ const Work = () => {
                 Next.js
               </span>
               <span className='bg-accent text-black p-1 rounded-sm text-xs'>
-                Tailwind Css
+                Tailwind CSS
               </span>
               <span className='bg-accent text-black p-1 rounded-sm text-xs'>
-                tRPC
-              </span>
-              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
-                Prisma
-              </span>
-            </div>
-          </div>
-          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
-            <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
-              <a
-                href='https://github.com/Amir-Adel9/lol-esports'
-                target={'_blank'}
-              >
-                <span className='cursor-pointer hover:underline'>
-                  Source Code & Preview
-                </span>
-              </a>
-            </div>
-            <img
-              src='projects/lolesports.jpg'
-              alt=''
-              className='w-full h-[40%] rounded-lg rounded-b-none'
-            />
-            <span>LoL Esports 🕹️</span>
-            <p className='text-sm font-noto text-center p-2'>
-              A League of Legends Esports API that queries data about the match
-              schedule, results and standings of the current season (still under
-              development, an integrated discord bot and website are coming
-              soon)
-            </p>
-            <div className='absolute w-[90%] bottom-5 flex flex-wrap justify-center gap-1'>
-              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
-                TypeScript
-              </span>
-              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
-                Node.js
-              </span>
-              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
-                Express
+                Spotify API
               </span>
             </div>
           </div>
@@ -184,13 +237,47 @@ const Work = () => {
             </span>
             <div className='absolute w-[90%] bottom-5 flex flex-wrap justify-center gap-1'>
               <span className='bg-accent text-black p-1 rounded-sm text-xs'>
-                HTML5
+                HTML
               </span>
               <span className='bg-accent text-black p-1 rounded-sm text-xs'>
-                CSS3
+                CSS
               </span>
               <span className='bg-accent text-black p-1 rounded-sm text-xs'>
                 JavaScript
+              </span>
+            </div>
+          </div>
+          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+            <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
+              <a
+                href='https://github.com/Amir-Adel9/coffee_express'
+                target={'_blank'}
+              >
+                <span className='cursor-pointer hover:underline'>
+                  Source Code & Preview
+                </span>
+              </a>
+            </div>
+            <img
+              src='projects/coffee.PNG'
+              alt=''
+              className='w-full h-[40%] rounded-lg rounded-b-none'
+            />
+            <span>Coffee Express ☕</span>
+            <span className='text-sm font-noto text-center p-2'>
+              A functional coffee shop application made with Flutter and uses
+              GetX for state management. It features a home page, a product
+              page, a cart, and the ability to add items to favorites.
+            </span>
+            <div className='absolute w-[90%] bottom-5 flex flex-wrap justify-center gap-1'>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Dart
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Flutter
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                GetX
               </span>
             </div>
           </div>
@@ -239,7 +326,7 @@ const Work = () => {
           <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
             <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
               <a
-                href='https://github.com/Amir-Adel9/coffee_express'
+                href='https://github.com/Amir-Adel9/image-processing'
                 target={'_blank'}
               >
                 <span className='cursor-pointer hover:underline'>
@@ -248,25 +335,67 @@ const Work = () => {
               </a>
             </div>
             <img
-              src='projects/coffee.PNG'
+              src='projects/img.jpg'
               alt=''
               className='w-full h-[40%] rounded-lg rounded-b-none'
             />
-            <span>Coffee Express ☕</span>
-            <span className='text-sm font-noto text-center p-2'>
-              A functional coffee shop application made with Flutter and uses
-              GetX for state management. It features a home page, a product
-              page, a cart, and the ability to add items to favorites.
-            </span>
+            <span>Image Processing 📷</span>
+            <p className='text-xs 2xl:text-sm font-noto text-center p-2'>
+              An API with endpoints for resizing and adding filters to images
+              using Sharp.
+            </p>
             <div className='absolute w-[90%] bottom-5 flex flex-wrap justify-center gap-1'>
               <span className='bg-accent text-black p-1 rounded-sm text-xs'>
-                Dart
+                TypeScript
               </span>
               <span className='bg-accent text-black p-1 rounded-sm text-xs'>
-                Flutter
+                Node.js
               </span>
               <span className='bg-accent text-black p-1 rounded-sm text-xs'>
-                GetX
+                Express
+              </span>
+
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Sharp
+              </span>
+            </div>
+          </div>
+          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+            <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
+              <a
+                href='https://github.com/Amir-Adel9/weather-journal-app'
+                target={'_blank'}
+              >
+                <span className='cursor-pointer hover:underline'>
+                  Source Code & Preview
+                </span>
+              </a>
+            </div>
+            <img
+              src='projects/weather.png'
+              alt=''
+              className='w-full h-[40%] border border-b- border-[#DDD] rounded-lg rounded-b-none'
+            />
+            <span>Weather Journal ☔</span>
+            <p className='text-xs 2xl:text-sm font-noto text-center p-2'>
+              An application that fetches weather data from the OpenWeatherAPI
+              based on a ZIP code input and displays it to the user.
+            </p>
+            <div className='absolute w-[90%] bottom-5 flex flex-wrap justify-center gap-1'>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                HTML
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                CSS
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                JavaScript
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Node.js
+              </span>
+              <span className='bg-accent text-black p-1 rounded-sm text-xs'>
+                Express
               </span>
             </div>
           </div>
