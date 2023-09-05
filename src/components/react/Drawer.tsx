@@ -55,7 +55,7 @@ const Drawer = () => {
                 className='mr-14 cursor-pointer opacity-50 duration-300 hover:opacity-100 hover:scale-105 after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:w-[0%] after:left-0 after:absolute after:-bottom-1  hover:after:w-full'
               >
                 <a
-                  href='https://drive.google.com/file/d/1ha7RP4XMNdwdScSKnUXt-hXr6wwJ0yXP/view'
+                  href='https://drive.google.com/file/d/1QwfFaBky8AvjiEMeIvp4_08RlKn5aUL6/view?usp=sharing'
                   className='flex items-center'
                   target={'_blank'}
                 >
