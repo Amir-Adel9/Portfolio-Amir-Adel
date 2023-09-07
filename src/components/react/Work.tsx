@@ -20,7 +20,7 @@ const Work = () => {
           </p>
         </div>
         <div className='flex flex-wrap gap-x-1 gap-y-5 justify-evenly text-base mt-16'>
-          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+          <div className='relative w-full h-[480px]  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group  lg:w-1/3 xl:w-1/4'>
             <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
               <a
                 href='https://www.arabianleaguegrounds.live/'
@@ -36,8 +36,8 @@ const Work = () => {
               alt=''
               className='w-full h-[40%] rounded-lg rounded-b-none'
             />
-            <span>Arabian League Grounds 🕹️</span>
-            <p className='text-sm font-noto text-center p-2'>
+            <span className='px-2'>Arabian League Grounds </span>
+            <p className='text-sm lg:text-xs 2xl:text-sm font-noto text-center p-2'>
               An all-in-one companion for Riot Games' League of Legends Arabian
               League championship with the ability to view the standings and
               schedule of the matches, while also being able to predict the
@@ -63,7 +63,7 @@ const Work = () => {
               </span>
             </div>
           </div>
-          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+          <div className='relative w-full h-[480px] bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group  lg:w-1/3 xl:w-1/4'>
             <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
               <a href='https://catcorner.vercel.app/' target={'_blank'}>
                 <span className='cursor-pointer hover:underline'>
@@ -85,7 +85,7 @@ const Work = () => {
               className='w-full h-[40%] rounded-lg rounded-b-none'
             />
             <span>Cat Corner 🐱</span>
-            <p className='text-xs 2xl:text-sm font-noto text-center p-2 '>
+            <p className='text-sm lg:text-xs 2xl:text-sm font-noto text-center p-2 '>
               A social media like website for posting pictures of cats, includes
               features as posting, liking, commenting and viewing user profiles,
               and any pictures that do not include a cat will be rejected <br />{' '}
@@ -112,7 +112,7 @@ const Work = () => {
               </span>
             </div>
           </div>
-          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+          <div className='relative w-full h-[480px] bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group  lg:w-1/3 xl:w-1/4'>
             <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
               <a href='https://typemaster-plus.vercel.app/' target={'_blank'}>
                 <span className='cursor-pointer hover:underline'>
@@ -133,8 +133,8 @@ const Work = () => {
               alt=''
               className='w-full h-[40%] border border-b- border-[#DDD] rounded-lg rounded-b-none'
             />
-            <span>Type Master ⌨️</span>
-            <p className='text-xs xl:text-sm font-noto text-center p-2'>
+            <h1 className='text-lg'>Type Master ⌨️</h1>
+            <p className='text-sm xl:text-base font-noto text-center p-2'>
               A full stack typing game with features like user registration,
               difficulties, themes, tracking progress and leveling system,
               leader boards and in-game stats such like typing accuracy.
@@ -160,7 +160,7 @@ const Work = () => {
               </span>
             </div>
           </div>
-          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+          <div className='relative w-full h-[480px] bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group  lg:w-1/3 xl:w-1/4'>
             <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
               <a href='https://amplified-spotify.vercel.app/' target={'_blank'}>
                 <span className='cursor-pointer hover:underline'>
@@ -205,7 +205,7 @@ const Work = () => {
               </span>
             </div>
           </div>
-          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+          <div className='relative w-full h-[480px] bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group  lg:w-1/3 xl:w-1/4'>
             <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
               <a
                 href='https://semicolon-amiradel.vercel.app/'
@@ -247,7 +247,7 @@ const Work = () => {
               </span>
             </div>
           </div>
-          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+          <div className='relative w-full h-[480px] bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group  lg:w-1/3 xl:w-1/4'>
             <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
               <a
                 href='https://github.com/Amir-Adel9/coffee_express'
@@ -281,7 +281,7 @@ const Work = () => {
               </span>
             </div>
           </div>
-          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+          <div className='relative w-full h-[480px] bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group  lg:w-1/3 xl:w-1/4'>
             <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
               <a
                 href='https://github.com/Amir-Adel9/store-backend'
@@ -323,7 +323,7 @@ const Work = () => {
               </span>
             </div>
           </div>
-          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+          <div className='relative w-full h-[480px] bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group  lg:w-1/3 xl:w-1/4'>
             <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
               <a
                 href='https://github.com/Amir-Adel9/image-processing'
@@ -360,7 +360,7 @@ const Work = () => {
               </span>
             </div>
           </div>
-          <div className='relative w-full h-96  bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group sm:w-2/3 lg:w-1/3 xl:w-1/4'>
+          <div className='relative w-full h-[480px] bg-[#222]  flex flex-col items-center duration-300 hover:scale-105 rounded-lg group  lg:w-1/3 xl:w-1/4'>
             <div className='absolute bg-black text-white font-noto w-full h-[40%] flex items-center justify-around duration-200 cursor-default opacity-0 group-hover:opacity-90'>
               <a
                 href='https://github.com/Amir-Adel9/weather-journal-app'
