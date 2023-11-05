@@ -6,7 +6,6 @@ import About from '../components/astro/About.astro';
 import Sides from '../components/react/Sides';
 import Work from '../components/astro/Work.astro';
 import Footer from '../components/react/Footer';
-import { Analytics } from '@vercel/analytics/react';
 ---
 
 <Layout title='Amir Adel | Software Developer'>
@@ -16,7 +15,6 @@ import { Analytics } from '@vercel/analytics/react';
     <About />
     <Work />
     <Sides client:load />
-    <Analytics />
   </main>
   <Footer />
 </Layout>
