@@ -16,8 +16,6 @@ export default defineConfig({
     webAnalytics: {
       enabled: true,
     },
-    analytics: {
-      enabled: true,
-    },
+    analytics: true,
   }),
 });
