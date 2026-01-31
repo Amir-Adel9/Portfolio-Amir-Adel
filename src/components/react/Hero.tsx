@@ -1,151 +1,216 @@
-import { ReactNode, useEffect, useRef, useState } from 'react';
-import Loading from './Loading';
-import Link from './svgs/Link';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { profile } from '../../data/profile';
+import React from 'react';
 
-const Hero: React.FC<{ children: ReactNode }> = (props) => {
-  const [isLoading, setIsLoading] = useState(false);
+const Hero = () => {
   const [isInjured, setIsInjured] = useState(false);
 
-  const titleRef = useRef<HTMLDivElement>(null);
-  const aboutRef = useRef<HTMLLIElement>(null);
-  const workRef = useRef<HTMLLIElement>(null);
-  const contactRef = useRef<HTMLLIElement>(null);
-  const resumeRef = useRef<HTMLLIElement>(null);
-  const imageRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    setTimeout(() => setIsLoading(false), 3000);
-  }, []);
-
-  useEffect(() => {
-    setTimeout(() => {
-      titleRef.current?.classList.remove('-translate-x-[900px]');
-      aboutRef.current?.classList.remove('translate-y-[90px]');
-      workRef.current?.classList.remove('translate-y-[120px]');
-      contactRef.current?.classList.remove('translate-y-[150px]');
-      resumeRef.current?.classList.remove('translate-y-[170px]');
-    }, 0);
-
-    setTimeout(() => {
-      workRef.current?.classList.remove('duration-700');
-      workRef.current?.classList.add('duration-300');
-      contactRef.current?.classList.remove('duration-[1200ms]');
-      contactRef.current?.classList.add('duration-300');
-      resumeRef.current?.classList.remove('duration-[1500ms]');
-      resumeRef.current?.classList.add('duration-300');
-    }, 3000);
-  }, []);
-
-  useEffect(() => {
-    if (isInjured) {
-      imageRef.current?.classList.remove(
-        'hover:animate-bounce',
-        'cursor-pointer'
-      );
-      imageRef.current?.classList.add('cursor-cell');
+  const scrollTo = (id: string) => {
+    const lenis = (window as any).lenis;
+    const target = document.getElementById(id);
+    if (lenis && target) {
+      lenis.scrollTo(target);
     } else {
-      imageRef.current?.classList.add('hover:animate-bounce', 'cursor-pointer');
-      imageRef.current?.classList.remove('cursor-cell');
+      target?.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [isInjured]);
+  };
+
+  const navItems = [
+    { id: 'about', label: 'About' },
+    { id: 'experience', label: 'Work' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'contact', label: 'Contact' },
+  ];
 
   return (
-    <>
-      {!isLoading ? (
-        <section
-          className='relative w-full min-h-screen z-10 flex flex-col pt-20 px-5 sm:pt-[17.5rem] sm:px-20 md:px-48 text-[#DDD]'
-          id='home'
-        >
-          <div className='grid grid-cols-[60%_auto] md:grid-cols-[45%_auto] weird:grid-cols-[40%_auto] md:w-full md:absolute md:top-[30%]'>
-            <div>
-              <h1
-                className='font-tilt text-4xl md:text-9xl -translate-x-[900px] duration-500'
-                ref={titleRef}
+    <section
+      id='home'
+      className='relative min-h-screen flex flex-col justify-center px-6 sm:px-12 lg:px-24'
+    >
+      {/* Background */}
+      <div className='absolute inset-0 overflow-hidden pointer-events-none'>
+        <div className='absolute top-1/4 -left-32 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px]' />
+        <div className='absolute bottom-1/4 -right-32 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[120px]' />
+      </div>
+
+      <div className='max-w-6xl mx-auto w-full relative z-10'>
+        <div className='grid lg:grid-cols-[1fr_auto] gap-12 items-center'>
+          {/* Content */}
+          <div>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className='text-accent font-mono text-sm sm:text-base mb-6'
+            >
+              Hi, my name is
+            </motion.p>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className='text-4xl sm:text-6xl lg:text-7xl text-text mb-4 font-tilt'
+            >
+              {profile.name}.
+            </motion.h1>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className='text-2xl sm:text-4xl lg:text-5xl text-text-muted mb-8 font-tilt'
+            >
+              I build things for the web.
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className='text-text-muted text-base sm:text-lg max-w-xl leading-relaxed mb-10'
+            >
+              {profile.shortBio}
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className='flex flex-wrap items-center gap-4'
+            >
+              <button
+                onClick={() => scrollTo('projects')}
+                className='px-5 py-2.5 bg-accent text-background text-sm font-medium rounded-md hover:bg-accent/85 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/20 transition-all duration-200'
               >
-                Hi, I'm Amir.
-              </h1>
-              <h2 className='font-tilt text-3xl md:text-5xl mb-5'>
-                I build things for the web.
-              </h2>
-              <div className='text-accent text-base sm:text-lg font-noto'>
-                <span className='block'>
-                  I'm a passionate, self taught software developer
-                </span>
-                <span className='block'>
-                  with a love for gaming, music and coding, and
-                </span>
-                <span className='block'>
-                  an ambition to leave a mark on the software world.
-                </span>
-              </div>
-            </div>
-            <img
-              src={`${!isInjured ? 'hat.png' : 'hatInjured.png'}`}
-              alt=''
-              className='-translate-y-7 w-40 h-40 inline hover:animate-bounce cursor-pointer opacity-0z'
-              ref={imageRef}
-              onClick={() => {
-                setIsInjured((prevState) => !prevState);
-              }}
-            />
-            <nav>
-              <ul className='block sm:flex mt-10 font-tilt text-xl md:text-3xl lg:text-5xl'>
-                <li
-                  ref={aboutRef}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const elementToView = document.getElementById('about');
-                    elementToView?.scrollIntoView();
-                  }}
-                  className='relative translate-y-[90px] opacity-50 hover:opacity-100 mr-14 sm:hover:-translate-y-4 duration-300 cursor-pointer after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:md:h-2 after:w-[0%] after:left-0 after:absolute after:-bottom-1 after:md:-bottom-2 hover:after:w-full'
-                >
-                  About
-                </li>
-                <li
-                  ref={workRef}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const elementToView = document.getElementById('work');
-                    elementToView?.scrollIntoView();
-                  }}
-                  className='relative translate-y-[120px] duration-700 mr-14 opacity-50 hover:opacity-100 sm:hover:-translate-y-4  cursor-pointer after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:md:h-2 after:w-[0%] after:left-0 after:absolute after:-bottom-1 after:md:-bottom-2 hover:after:w-full'
-                >
-                  Work
-                </li>
-                <li
-                  ref={contactRef}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const elementToView = document.getElementById('contact');
-                    elementToView?.scrollIntoView();
-                  }}
-                  className='relative mr-14 translate-y-[150px] opacity-50 hover:opacity-100  sm:hover:-translate-y-4 hover: duration-[1200ms] cursor-pointer after:content-[""] after:bg-[#DDD] after:duration-300 after:md:h-2 after:h-1 after:w-[0%] after:left-0 after:absolute after:-bottom-1 after:md:-bottom-2 hover:after:w-full'
-                >
-                  Contact
-                </li>
-                <li
-                  ref={resumeRef}
-                  className='relative duration-[1500ms] translate-y-[170px] opacity-50 hover:opacity-100  sm:hover:-translate-y-4 cursor-pointer after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:md:h-2 after:w-[0%] after:left-0 after:absolute after:-bottom-1 after:md:-bottom-2 hover:after:w-full'
-                >
-                  <div>
-                    <a
-                      href='https://drive.google.com/file/d/1A7FumODtWLIjNo3RLOakD_usX2iqOHX7/view?usp=sharing'
-                      className='flex items-center'
-                      target={'_blank'}
-                    >
-                      <span className='mr-3'>Resume</span> <Link />
-                    </a>
-                  </div>
-                </li>
-              </ul>
-            </nav>
+                View My Work
+              </button>
+              <a
+                href={profile.links.resume}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='px-5 py-2.5 text-sm font-medium rounded-md border border-accent text-accent hover:-translate-y-0.5 transition-all duration-200'
+              >
+                Resume
+              </a>
+            </motion.div>
           </div>
-          <div>{props.children}</div>
-        </section>
-      ) : (
-        <Loading />
-      )}
-    </>
+
+          {/* Hat friend */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className='hidden lg:block'
+          >
+            <div className='relative'>
+              <div
+                className='absolute inset-0 bg-accent/20 rounded-full blur-3xl scale-125 animate-pulse'
+                style={{ animationDuration: '4s' }}
+              />
+              <img
+                src={isInjured ? '/hatInjured.png' : '/hat.png'}
+                alt=''
+                className={`relative w-44 h-44 cursor-pointer transition-transform duration-300 ${
+                  isInjured ? 'rotate-6' : 'hover:scale-105'
+                }`}
+                onClick={() => setIsInjured((prev) => !prev)}
+              />
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Big Bold Navigation with Y translation */}
+        <motion.nav
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className='mt-20'
+        >
+          <ul className='flex flex-wrap gap-x-10 gap-y-4'>
+            {navItems.map((item, i) => (
+              <motion.li
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.8 + i * 0.1 }}
+              >
+                <button
+                  onClick={() => scrollTo(item.id)}
+                  className='group relative text-3xl sm:text-4xl md:text-5xl font-tilt text-text-muted opacity-60 hover:opacity-100 hover:text-text hover:-translate-y-2 transition-all duration-300'
+                >
+                  <span className='relative'>
+                    {item.label}
+                    <span className='absolute -bottom-2 left-0 w-0 h-2 bg-current group-hover:w-full transition-all duration-300' />
+                  </span>
+                </button>
+              </motion.li>
+            ))}
+            <motion.li
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 1.2 }}
+            >
+              <a
+                href={profile.links.resume}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='group relative text-3xl sm:text-4xl md:text-5xl font-tilt text-text-muted opacity-60 hover:opacity-100 hover:text-text hover:-translate-y-2 transition-all duration-300 inline-flex items-center gap-3'
+              >
+                <span className='relative'>
+                  Resume
+                  <span className='absolute -bottom-2 left-0 w-0 h-2 bg-current group-hover:w-full transition-all duration-300' />
+                </span>
+                <svg
+                  className='w-6 h-6 sm:w-8 sm:h-8'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
+                  />
+                </svg>
+              </a>
+            </motion.li>
+          </ul>
+        </motion.nav>
+      </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 0.5 }}
+        className='absolute bottom-8 left-1/2 -translate-x-1/2'
+      >
+        <button
+          onClick={() => scrollTo('about')}
+          className='text-text-muted hover:text-accent transition-colors'
+          aria-label='Scroll down'
+        >
+          <motion.svg
+            animate={{ y: [0, 6, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+            className='w-5 h-5'
+            fill='none'
+            stroke='currentColor'
+            viewBox='0 0 24 24'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth={2}
+              d='M19 14l-7 7m0 0l-7-7m7 7V3'
+            />
+          </motion.svg>
+        </button>
+      </motion.div>
+    </section>
   );
 };
 

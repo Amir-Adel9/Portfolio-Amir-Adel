@@ -1,20 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/react/Header';
-import Hero from '../components/astro/Hero.astro';
-import About from '../components/astro/About.astro';
-import Sides from '../components/react/Sides';
-import Work from '../components/astro/Work.astro';
+import Hero from '../components/react/Hero';
+import About from '../components/react/About';
+import Experience from '../components/react/Experience';
+import Skills from '../components/react/Skills';
+import Projects from '../components/react/Projects';
 import Footer from '../components/react/Footer';
 ---
 
-<Layout title='Amir Adel | Software Developer'>
+<Layout title='Amir Adel | Software Engineer'>
   <Header client:load />
-  <main class='overflow-x-hidden'>
-    <Hero />
-    <About />
-    <Work />
-    <Sides client:load />
+  <main>
+    <Hero client:load />
+    <About client:visible />
+    <Experience client:visible />
+    <Skills client:visible />
+    <Projects client:visible />
   </main>
-  <Footer />
+  <Footer client:visible />
 </Layout>

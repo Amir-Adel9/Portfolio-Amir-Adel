@@ -1,72 +1,103 @@
 ---
 export interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description = "Amir Adel - Software Engineer building production systems with React, Next.js, TypeScript, and React Native." } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang='en' class=''>
+<html lang='en'>
   <head>
     <meta charset='UTF-8' />
-    <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.png' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta name='description' content={description} />
+    <link rel='icon' type='image/png' href='/favicon.png' />
+    
+    <!-- Fonts -->
     <link rel='preconnect' href='https://fonts.googleapis.com' />
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
     <link
-      href='https://fonts.googleapis.com/css2?family=Sono&display=swap'
+      href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Tilt+Warp&display=swap'
       rel='stylesheet'
     />
-    <link
-      href='https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap'
-      rel='stylesheet'
-    />
-    <link
-      href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap'
-      rel='stylesheet'
-    />
+    
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class='bg-background text-text font-sans antialiased'>
     <slot />
+    
+    <!-- Lenis Smooth Scroll -->
+    <script>
+      import Lenis from 'lenis';
+      
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: 'vertical',
+        smoothWheel: true,
+      });
+
+      function raf(time: number) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+      (window as any).lenis = lenis;
+    </script>
   </body>
 </html>
+
 <style is:global>
-  :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      #64ffda 30%,
-      white 60%
-    );
-  }
   html {
-    scroll-behavior: smooth;
-    font-family: system-ui, sans-serif;
     background-color: #111;
-  }
-  body {
-    position: absolut;
-  }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-  }
-  ::-webkit-scrollbar {
-    background-color: #111;
-    width: 15px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #222;
-    border-radius: 10px;
   }
 
-  @media only screen and (max-width: 640px) {
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  ::selection {
+    background-color: rgba(100, 255, 218, 0.2);
+    color: #64ffda;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #111;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #64ffda;
+  }
+
+  @media (max-width: 640px) {
     ::-webkit-scrollbar {
       display: none;
     }
+  }
+
+  *:focus-visible {
+    outline: 2px solid #64ffda;
+    outline-offset: 2px;
+  }
+
+  .font-tilt {
+    font-family: 'Tilt Warp', system-ui, sans-serif;
   }
 </style>

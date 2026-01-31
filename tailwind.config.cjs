@@ -3,42 +3,40 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
-      screens: {
-        weird: '1115px',
-      },
       colors: {
+        background: '#111',
+        surface: '#1a1a1a',
+        'surface-hover': '#222',
+        'surface-light': '#2a2a2a',
         accent: '#64ffda',
+        'accent-dim': 'rgba(100, 255, 218, 0.1)',
+        text: '#e5e5e5',
+        'text-muted': '#a3a3a3',
+        'text-dim': '#666',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Menlo', 'monospace'],
+        tilt: ['Tilt Warp', 'system-ui', 'sans-serif'],
       },
       keyframes: {
-        load: {
-          '0%': { width: '0%' },
-          '80%': { width: '100%' },
+        'fade-up': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        arrow: {
-          '0%': {
-            height: '120px',
-          },
-          '20%': {
-            height: '96px',
-          },
-          '50%': {
-            height: '96px',
-          },
-          '80%': {
-            height: '96px',
-          },
-          '100%': {
-            height: '120px',
-          },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        'pulse-glow': {
+          '0%, 100%': { opacity: '0.3' },
+          '50%': { opacity: '0.6' },
         },
       },
       animation: {
-        arrow: 'arrow 2s linear infinite',
-      },
-      fontFamily: {
-        sono: ['Sono'],
-        tilt: ['Tilt Warp'],
-        noto: ['Noto Sans JP'],
+        'fade-up': 'fade-up 0.6s ease-out forwards',
+        'fade-in': 'fade-in 0.5s ease-out forwards',
+        'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
       },
     },
   },

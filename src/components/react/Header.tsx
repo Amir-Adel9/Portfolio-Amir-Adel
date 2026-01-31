@@ -1,109 +1,144 @@
 import { useEffect, useState } from 'react';
-import Drawer from './Drawer';
-import Hamburger from './svgs/Hamburger';
-import HeaderLink from './svgs/HeaderLink';
+import { motion, AnimatePresence } from 'framer-motion';
+import { profile } from '../../data/profile';
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeNav, setActiveNav] = useState('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', listenToScroll);
-    return () => window.removeEventListener('scroll', listenToScroll);
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > 100);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const listenToScroll = () => {
-    const aboutHeight = 500;
-    const workHeight = 1600;
-
-    const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
-
-    if (winScroll > aboutHeight && winScroll < workHeight) {
-      setIsVisible(true);
-      setActiveNav('About');
-    } else if (winScroll > workHeight) {
-      setIsVisible(true);
-      setActiveNav('Work');
+  const scrollTo = (id: string) => {
+    setIsMobileMenuOpen(false);
+    const lenis = (window as any).lenis;
+    const target = document.getElementById(id);
+    if (lenis && target) {
+      lenis.scrollTo(target);
     } else {
-      setIsVisible(false);
-      setActiveNav('');
+      target?.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
+  const navItems = [
+    { id: 'about', label: 'About' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'contact', label: 'Contact' },
+  ];
+
   return (
-    <header
-      className={`fixed z-50 top-0 flex items-center justify-between w-full duration-500 text-lg bg-[#111] h-[8%] text-[#DDD] font-noto
-      ${isVisible ? 'translate-y-0' : '-translate-y-[70rem]'}`}
-    >
-      <span
-        className='ml-4 sm:ml-12 md:ml-28 flex justify-center items-center cursor-pointer'
-        onClick={(e) => {
-          e.preventDefault();
-          const elementToView = document.getElementById('home');
-          elementToView?.scrollIntoView();
-        }}
+    <>
+      <motion.header
+        initial={{ y: -100 }}
+        animate={{ y: isVisible ? 0 : -100 }}
+        transition={{ duration: 0.3 }}
+        className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-surface-light"
       >
-        <b className='hover:opacity-80'>Amir Adel</b>
-      </span>
-      <nav>
-        <ul className=' hidden sm:flex font-mono'>
-          <li
-            className={`mr-14 cursor-pointer  duration-300 hover:opacity-100 hover:scale-105 after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:w-[0%] after:left-0 after:absolute after:-bottom-1  hover:after:w-full ${
-              activeNav === 'About'
-                ? 'opacity-100 scale-105 after:w-full'
-                : 'opacity-50'
-            }`}
-            onClick={(e) => {
-              e.preventDefault();
-              const elementToView = document.getElementById('about');
-              elementToView?.scrollIntoView();
-            }}
+        <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+          {/* Logo */}
+          <button
+            onClick={() => scrollTo('home')}
+            className="group flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            About
-          </li>
-          <li
-            className={`mr-14 cursor-pointer  duration-300 hover:opacity-100 hover:scale-105 after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:w-[0%] after:left-0 after:absolute after:-bottom-1  hover:after:w-full ${
-              activeNav === 'Work'
-                ? 'opacity-100 scale-105 after:w-full'
-                : 'opacity-50'
-            }`}
-            onClick={(e) => {
-              e.preventDefault();
-              const elementToView = document.getElementById('work');
-              elementToView?.scrollIntoView();
-            }}
+            <div className="w-10 h-10 rounded border-2 border-accent flex items-center justify-center group-hover:bg-accent/10 transition-colors">
+              <span className="text-accent font-display font-bold text-lg">A</span>
+            </div>
+          </button>
+
+          <nav className="hidden md:block">
+            <ul className="flex items-center gap-6">
+              {navItems.map((item) => (
+                <li key={item.id}>
+                  <button
+                    onClick={() => scrollTo(item.id)}
+                    className="text-sm text-text-muted hover:text-accent transition-colors"
+                  >
+                    {item.label}
+                  </button>
+                </li>
+              ))}
+              <li>
+                <a
+                  href={profile.links.resume}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 border border-accent text-accent rounded text-sm hover:bg-accent/10 transition-colors"
+                >
+                  Resume
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-2 text-text-muted hover:text-accent transition-colors"
+            aria-label="Menu"
           >
-            Work
-          </li>
-          <li
-            className={`mr-14 cursor-pointer  duration-300 hover:opacity-100 hover:scale-105 after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:w-[0%] after:left-0 after:absolute after:-bottom-1  hover:after:w-full ${
-              activeNav === 'Contact'
-                ? 'opacity-100 scale-105 after:w-full'
-                : 'opacity-50'
-            }`}
-            onClick={(e) => {
-              e.preventDefault();
-              const elementToView = document.getElementById('contact');
-              elementToView?.scrollIntoView();
-            }}
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+      </motion.header>
+
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-40 md:hidden"
           >
-            Contact
-          </li>
-          <li className='mr-14 cursor-pointer opacity-50 duration-300 hover:opacity-100 hover:scale-105 after:content-[""] after:bg-[#DDD] after:duration-300 after:h-1 after:w-[0%] after:left-0 after:absolute after:-bottom-1  hover:after:w-full'>
-            <a
-              href='https://drive.google.com/file/d/1FB-bBMzj7aZlNyuFmM-ih1zwx2rPhtzb/view?usp=sharing'
-              className='flex items-center'
-              target={'_blank'}
-            >
-              <span className='mr-1'>Resume</span>
-              <HeaderLink />
-            </a>
-          </li>
-        </ul>
-        <Drawer />
-      </nav>
-    </header>
+            <div className="absolute inset-0 bg-background/95 backdrop-blur-md" onClick={() => setIsMobileMenuOpen(false)} />
+            <nav className="absolute inset-x-0 top-16 p-6">
+              <ul className="flex flex-col gap-4">
+                {navItems.map((item, i) => (
+                  <motion.li
+                    key={item.id}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.05 }}
+                  >
+                    <button
+                      onClick={() => scrollTo(item.id)}
+                      className="text-lg text-text hover:text-accent transition-colors"
+                    >
+                      {item.label}
+                    </button>
+                  </motion.li>
+                ))}
+                <motion.li
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.25 }}
+                >
+                  <a
+                    href={profile.links.resume}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 px-6 py-3 border border-accent text-accent rounded hover:bg-accent/10 transition-colors"
+                  >
+                    Resume
+                  </a>
+                </motion.li>
+              </ul>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 
