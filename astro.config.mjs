@@ -5,7 +5,8 @@ import vercel from '@astrojs/vercel';
 
 export default defineConfig({
   integrations: [react(), tailwind()],
-  output: 'server',
+  // Fully static site; avoids pnpm+Vercel NFT symlink bundling EPERM on Windows.
+  output: 'static',
   adapter: vercel({
     webAnalytics: {
       enabled: true,

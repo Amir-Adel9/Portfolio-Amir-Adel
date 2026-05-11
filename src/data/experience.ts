@@ -7,18 +7,35 @@ export interface Experience {
   period: string;
   current: boolean;
   highlights: string[];
-  tech: string[];
 }
 
 export const experiences: Experience[] = [
+  {
+    id: 'rightshero',
+    title: 'Full-Stack Developer',
+    company: 'RightsHero',
+    companyUrl: 'https://rightshero.com',
+    location: 'Cairo, Egypt',
+    period: 'Apr 2026 - Present',
+    current: true,
+    highlights: [
+      'Built production systems across the stack using TypeScript, React, Python, and Django',
+      'Developed and shipped end-to-end features across frontend and backend',
+      'Collaborated with engineers and stakeholders to deliver scalable solutions',
+      'Contributed to anti-piracy systems for protecting digital content at scale',
+      'Wrote clean, maintainable code and followed strong engineering practices',
+      'Participated in technical decisions and system design discussions',
+      'Continuously improved and adapted to new tools and workflows',
+    ],
+  },
   {
     id: 'creiden',
     title: 'Frontend Developer',
     company: 'Creiden',
     companyUrl: 'https://creiden.com',
     location: 'Alexandria, Egypt',
-    period: '2023 - Present',
-    current: true,
+    period: 'Nov 2023 - Apr 2026',
+    current: false,
     highlights: [
       'Built and maintained production-grade web applications using TypeScript, Next.js, and React',
       'Shipped mobile features using React Native, Expo, and TypeScript',
@@ -27,16 +44,6 @@ export const experiences: Experience[] = [
       'Improved CI/CD performance, cutting build time from 20 min to 1.5 min (13× faster)',
       'Developed AI-powered features including real-time chatbots and contextual user suggestions',
       'Contributed to re-architecting systems to improve scalability and maintainability',
-    ],
-    tech: [
-      'TypeScript',
-      'Next.js',
-      'React',
-      'React Native',
-      'Expo',
-      'Laravel',
-      'PHP',
-      'Tailwind CSS',
     ],
   },
 ];

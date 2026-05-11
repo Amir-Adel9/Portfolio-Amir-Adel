@@ -1,6 +1,6 @@
 export const profile = {
   name: 'Amir Adel',
-  title: 'Software Engineer',
+  title: 'Software Developer',
   location: 'Alexandria, Egypt',
   email: 'amiradel899@gmail.com',
   phone: '+20 127 971 3489',
@@ -10,11 +10,7 @@ export const profile = {
     github: 'https://github.com/Amir-Adel9',
     linkedin: 'https://linkedin.com/in/amir-adel312',
     website: 'https://amiradel.vercel.app',
-    resume: 'https://drive.google.com/file/d/1A7FumODtWLIjNo3RLOakD_usX2iqOHX7/view?usp=sharing',
-  },
-  education: {
-    degree: 'Bachelor of Psychology',
-    institution: 'Faculty of Arts - Alexandria University',
-    period: '2021 - Present',
+    resume:
+      'https://drive.google.com/file/d/1A7FumODtWLIjNo3RLOakD_usX2iqOHX7/view?usp=sharing',
   },
 };
