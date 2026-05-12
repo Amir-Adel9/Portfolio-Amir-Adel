@@ -34,7 +34,7 @@ export const experiences: Experience[] = [
     company: 'Creiden',
     companyUrl: 'https://creiden.com',
     location: 'Alexandria, Egypt',
-    period: 'Nov 2023 - Apr 2026',
+    period: 'Nov 2023 - Mar 2026',
     current: false,
     highlights: [
       'Built and maintained production-grade web applications using TypeScript, Next.js, and React',
