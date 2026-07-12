@@ -33,7 +33,7 @@ export const experiences: Experience[] = [
     title: 'Frontend Developer',
     company: 'Creiden',
     companyUrl: 'https://creiden.com',
-    location: 'Alexandria, Egypt  · Onsite',
+    location: 'Alexandria, Egypt  · On-site',
     period: 'Nov 2023 - Mar 2026',
     current: false,
     highlights: [
