@@ -15,7 +15,7 @@ export const experiences: Experience[] = [
     title: 'Full-Stack Developer',
     company: 'RightsHero',
     companyUrl: 'https://rightshero.com',
-    location: 'Cairo, Egypt',
+    location: 'Dubai, United Arab Emirates · Remote',
     period: 'Apr 2026 - Present',
     current: true,
     highlights: [
@@ -33,7 +33,7 @@ export const experiences: Experience[] = [
     title: 'Frontend Developer',
     company: 'Creiden',
     companyUrl: 'https://creiden.com',
-    location: 'Alexandria, Egypt',
+    location: 'Alexandria, Egypt  · Onsite',
     period: 'Nov 2023 - Mar 2026',
     current: false,
     highlights: [
